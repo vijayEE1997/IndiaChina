@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  font-family: Roboto,'Arial', BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.root{
+  height: auto;
+}
+.sidebar {
+  float: left;
+  width: 270px;
+  background: #FFFFFF;
+  min-height:100%;
+  position:fixed;
+  z-index: 100;
+  left:-100%;
+  animation: slide-open 0.25s forwards;
+}
+@keyframes slide-open {
+  100% {left: 0}
+}
+.sidebar.close
+{
+  left:0;
+  animation: slide-closed 0.75s forwards;
+}
+@keyframes slide-closed {
+  100% {left: -100%}
+}
+.sidebar-slider svg{
+  width: 30px;
+  fill: white;
+}
+.sidebar-slider svg:hover{
+  fill: #aeaeae;
+}
+.sidebar-img{
+  max-height: 20% ;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  background-color: black;
+}
+.sidebar img{
+  width: 240px;
+}
+.sidebar-content>ul{
+  list-style-type: none;
+  padding:0;
+  margin: 0;
+  line-height: 1.5em;
+  font-family: Arial, sans-serif;
+}
+.sidebar-content li{
+  padding:1%;
+  margin: 1%;
+}
+.sidebar-content li:hover{
+  background: #dadada;
+  border-style: solid;
+  border-color: #dadada;
+}
+.sidebar-content>hr{
+  margin: 0;
+  border-style:solid;
+  border-color: rgba(174, 174, 174, 0.24);
+}
+.sidebar-footer{
+  position: fixed;
+  left:0;
+  bottom: 0;
+  width: 15%;
+  text-align: center;
+}
+.sidebar-footer>p,.sidebar-footer svg{
+  display: inline-block;
+  padding: 0 10px;;
+  color: #a2a2a2;
+}
+.sidebar-footer:hover{
+  background-color: #e6e6e6;
+  color: black;
+}
+.main-header{
+  height: 100px;
+  display: flex;
+  box-shadow: 0 0 5px 0 #f9553e;
+  margin: 0 0 5px 0;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-header-heading{
+  width: 98%;
+  text-align: center;
+}
+#main-header-toggle{
+  margin-left: 50px;
+}
+.page{
+  float: right;
+  height: auto;
+  margin-left: 0;
+  padding: 1px;
+  background-color: #dfdfdf;
+}
+.page.close{
+  width: 85%;
+  margin-left: 15%;
+}
+
+.sidebar a{
+  text-decoration: none;
+  color: #0d1b2a;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
